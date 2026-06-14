@@ -4,7 +4,7 @@ import { useAuthStore } from '../store/authStore'
 import axios from 'axios'
 
 export default function Dashboard() {
-  const API = "http://localhost:4000"
+  const API = "https://digital-udhaar-khatabook.onrender.com"
 const navigate = useNavigate()
   const { currentUser, signout } = useAuthStore()
   const [customers, setCustomers] = useState([])
