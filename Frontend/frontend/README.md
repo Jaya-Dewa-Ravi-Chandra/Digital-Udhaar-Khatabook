@@ -1,16 +1,173 @@
-# React + Vite
+# UdhaarBook Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Frontend application built using React and Vite for managing customer udhaar transactions digitally.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Tech Stack
 
-## React Compiler
+| Technology        | Purpose           |
+| ----------------- | ----------------- |
+| React 18          | User Interface    |
+| Vite              | Build Tool        |
+| Tailwind CSS      | Styling           |
+| React Router DOM  | Routing           |
+| Zustand           | State Management  |
+| Axios             | API Requests      |
+| Razorpay Checkout | Payment Interface |
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## Structure
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```text
+Frontend/frontend/
+│
+├── public/
+│   └── hero.gif
+│
+├── src/
+│   ├── pages/
+│   ├── authStore.js
+│   ├── App.jsx
+│   ├── App.css
+│   ├── main.jsx
+│   └── index.css
+│
+├── index.html
+├── package.json
+└── vite.config.js
+```
+
+---
+
+## Installation
+
+```bash
+cd Frontend/frontend
+npm install
+```
+
+---
+
+## Environment Variables
+
+Create:
+
+```env
+VITE_API_URL=https://your-backend.onrender.com
+VITE_RAZORPAY_KEY_ID=rzp_live_xxxxxxxxx
+```
+
+---
+
+## Run Project
+
+Development:
+
+```bash
+npm run dev
+```
+
+Production Build:
+
+```bash
+npm run build
+```
+
+Preview Build:
+
+```bash
+npm run preview
+```
+
+---
+
+## Available Routes
+
+| Route                    | Access |
+| ------------------------ | ------ |
+| /                        | Public |
+| /signin                  | Public |
+| /signup                  | Public |
+| /dashboard               | User   |
+| /customers//transactions | User   |
+| /trash                   | User   |
+| /admin                   | Admin  |
+
+---
+
+## Key Features
+
+### Authentication
+
+* Login
+* Registration
+* Session Persistence
+* Protected Routes
+
+### Customer Management
+
+* Create Customers
+* Edit Customers
+* Delete Customers
+
+### Transaction Management
+
+* Add Credit
+* Add Debit
+* Mark Paid
+* Razorpay Payments
+* Cash Payments
+
+### Trash Management
+
+* Restore Deleted Transactions
+* Permanently Delete Transactions
+
+### Admin Dashboard
+
+* View Users
+* Block Users
+* Unblock Users
+
+---
+
+## Razorpay Integration
+
+```text
+Create Order
+      ↓
+Open Checkout
+      ↓
+Payment Success
+      ↓
+Verify Signature
+      ↓
+Update Transaction Status
+```
+
+---
+
+## Deployment
+
+### Vercel
+
+Build Command
+
+```bash
+npm run build
+```
+
+Output Directory
+
+```text
+dist
+```
+
+Environment Variables:
+
+```env
+VITE_API_URL=https://your-backend.onrender.com
+VITE_RAZORPAY_KEY_ID=rzp_live_xxxxxxxxx
+```
