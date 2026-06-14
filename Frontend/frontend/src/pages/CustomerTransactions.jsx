@@ -5,7 +5,7 @@ import axios from 'axios'
 
 export default function CustomerTransactions() {
   const { customerId } = useParams()
-  const API = "http://localhost:4000"
+  const API = "https://digital-udhaar-khatabook.onrender.com"
 const navigate = useNavigate()
   const { signout } = useAuthStore()
   const [transactions, setTransactions] = useState([])
