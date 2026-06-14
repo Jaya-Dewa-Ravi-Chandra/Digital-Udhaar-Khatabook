@@ -1,0 +1,12 @@
+### CONNECT RAZORPAY
+GET http://localhost:4000/api/razorpay/connect
+
+###
+
+### CHECK RAZORPAY STATUS
+GET http://localhost:4000/api/razorpay/status
+
+###
+
+### DISCONNECT RAZORPAY
+DELETE http://localhost:4000/api/razorpay/disconnect

@@ -1,0 +1,58 @@
+### =========================================
+### ADD CREDIT TRANSACTION
+### =========================================
+
+POST http://localhost:4000/api/transactions/credit
+Content-Type: application/json
+
+{
+  "customerId":"6a0fe4278fcf81ae08932fba",
+  "amount":500,
+  "description":"Milk packet"
+}
+
+###
+
+### =========================================
+### ADD DEBIT TRANSACTION
+### =========================================
+
+POST http://localhost:4000/api/transactions/debit
+Content-Type: application/json
+
+{
+  "customerId":"6a0fe4278fcf81ae08932fba",
+  "amount":300,
+  "description":"Customer paid cash"
+}
+
+###
+
+### =========================================
+### GET CUSTOMER TRANSACTIONS
+### =========================================
+
+GET http://localhost:4000/api/transactions/6a0fe4278fcf81ae08932fba
+
+###
+
+### =========================================
+### UPDATE TRANSACTION
+### =========================================
+
+PUT http://localhost:4000/api/transactions/6a0fe51abbfdf10da4164070
+Content-Type: application/json
+
+{
+  "amount":1000,
+  "description":"Updated amount",
+  "status":"PAID"
+}
+
+###
+
+### =========================================
+### DELETE TRANSACTION
+### =========================================
+
+DELETE http://localhost:4000/api/transactions/665f4d9b6f1c2a0099999999

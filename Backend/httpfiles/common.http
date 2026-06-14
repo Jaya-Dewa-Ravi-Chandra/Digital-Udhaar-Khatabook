@@ -1,0 +1,42 @@
+###
+
+POST http://localhost:4000/api/common/signup
+Content-Type: application/json
+
+{
+  "Name":"Dewa",
+  "email":"dewa@gmail.com",
+  "password":"123456"
+}
+
+###
+
+### SIGNIN
+POST http://localhost:4000/api/common/signin
+Content-Type: application/json
+
+{
+  "email":"dewa@gmail.com",
+  "password":"123456"
+}
+
+###
+
+### CHECK AUTH
+GET http://localhost:4000/api/common/check-auth
+
+###
+
+### CHANGE PASSWORD
+PUT http://localhost:4000/api/common/password
+Content-Type: application/json
+
+{
+  "oldpassword":"123456",
+  "newpassword":"abcdef"
+}
+
+###
+
+### SIGNOUT
+GET http://localhost:4000/api/common/Signout

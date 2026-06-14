@@ -1,0 +1,34 @@
+### CREATE CUSTOMER
+POST http://localhost:4000/api/customers/upload-customer
+Content-Type: application/json
+
+{
+  "name":"Rahul",
+  "phone":9876543210
+}
+
+###
+
+### GET ALL CUSTOMERS
+GET http://localhost:4000/api/customers/get-customers
+
+###
+
+### GET CUSTOMER BY ID
+GET http://localhost:4000/api/customers/get-customerById/6a0fe4278fcf81ae08932fba
+
+###
+
+### UPDATE CUSTOMER
+PUT http://localhost:4000/api/customers/edit-customerById/6a0fe4278fcf81ae08932fba
+Content-Type: application/json
+
+{
+  "name":"Updated Rahul",
+  "phone":9999999999
+}
+
+###
+
+### DELETE CUSTOMER
+DELETE http://localhost:4000/api/customers/delete-customerById/PUT_CUSTOMER_ID_HERE

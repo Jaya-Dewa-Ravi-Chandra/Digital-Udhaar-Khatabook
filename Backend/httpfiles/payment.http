@@ -1,0 +1,20 @@
+### CREATE ORDER FOR SINGLE TRANSACTION
+POST http://localhost:4000/api/payment/create-order/6a0fe59c04a3c2f9c909e846
+
+
+###
+
+### CREATE ORDER FOR CUSTOMER PENDING TRANSACTIONS
+POST http://localhost:4000/api/payment/create-order/customer/PUT_CUSTOMER_ID_HERE
+
+###
+
+### VERIFY PAYMENT
+POST http://localhost:4000/api/payment/verify
+Content-Type: application/json
+
+{
+  "razorpay_order_id":"order_xxxxx",
+  "razorpay_payment_id":"pay_xxxxx",
+  "razorpay_signature":"signature_xxxxx"
+}
