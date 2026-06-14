@@ -49,16 +49,6 @@ npm install
 ```
 
 ---
-
-## Environment Variables
-
-Create:
-
-```env
-VITE_API_URL=https://your-backend.onrender.com
-VITE_RAZORPAY_KEY_ID=rzp_live_xxxxxxxxx
-```
-
 ---
 
 ## Run Project
@@ -163,11 +153,4 @@ Output Directory
 
 ```text
 dist
-```
-
-Environment Variables:
-
-```env
-VITE_API_URL=https://your-backend.onrender.com
-VITE_RAZORPAY_KEY_ID=rzp_live_xxxxxxxxx
 ```
