@@ -10,7 +10,7 @@ export default function TrashBin() {
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState('')
   const [actionLoading, setActionLoading] = useState(null) // track which row is loading
-  const API="http://localhost:4000"
+  const API="https://digital-udhaar-khatabook.onrender.com"
   const fetchTrash = async () => {
     try {
       setLoading(true)
