@@ -12,7 +12,7 @@ config()
 const app=exp()
 app.use(exp.json())
 app.use(cors({
-    origin: "https://digital-udhaar-khatabook.vercel.app/",
+    origin: "https://digital-udhaar-khatabook.vercel.app",
     credentials: true,
   }))
 app.use(cookieParser())
