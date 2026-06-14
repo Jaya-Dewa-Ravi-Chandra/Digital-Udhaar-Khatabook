@@ -1,7 +1,7 @@
 import { create } from "zustand";
 import axios from "axios";
 
-const API = "http://localhost:4000/api/common";
+const API = "https://digital-udhaar-khatabook.onrender.com/api/common";
 
 export const useAuthStore = create((set) => ({
   currentUser: null,
