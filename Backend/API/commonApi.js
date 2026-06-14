@@ -40,8 +40,8 @@ commonApp.post("/signin", async (req, res) => {
   );
   res.cookie("token", signedToken, {
     httpOnly: true,
-    secure: false,
-    sameSite: "lax",
+    secure: true,
+    sameSite: "none",
   });
   let userObj = user.toObject();
   delete userObj.password;
@@ -50,7 +50,7 @@ commonApp.post("/signin", async (req, res) => {
 
 // ── Sign Out ───────────────────────────────────────────
 commonApp.get("/Signout", (req, res) => {
-  res.clearCookie("token", { httpOnly: true, secure: false, sameSite: "lax" });
+  res.clearCookie("token", { httpOnly: true, secure: true, sameSite: "none" });
   res.status(200).json({ message: "Logout success" });
 });
 
