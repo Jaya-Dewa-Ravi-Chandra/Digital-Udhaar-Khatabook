@@ -12,7 +12,7 @@ export default function AdminDashboard() {
 
   const fetchUsers = async () => {
     try {
-      const res = await axios.get('/api/common/users', { withCredentials: true })
+      const res = await axios.get('https://digital-udhaar-khatabook.onrender.com/api/common/users', { withCredentials: true })
       setUsers(res.data.payload || [])
     } catch { setError('Failed to load users.') }
     finally { setLoading(false) }
@@ -27,14 +27,14 @@ export default function AdminDashboard() {
 
   const handleBlock = async (id) => {
     try {
-      await axios.put(`/api/common/block-user/${id}`, {}, { withCredentials: true })
+      await axios.put(`https://digital-udhaar-khatabook.onrender.com/api/common/block-user/${id}`, {}, { withCredentials: true })
       fetchUsers()
     } catch (err) { setError(err.response?.data?.message || 'Failed to block user.') }
   }
 
   const handleUnblock = async (id) => {
     try {
-      await axios.put(`/api/common/unblock-user/${id}`, {}, { withCredentials: true })
+      await axios.put(`https://digital-udhaar-khatabook.onrender.com/api/common/unblock-user/${id}`, {}, { withCredentials: true })
       fetchUsers()
     } catch (err) { setError(err.response?.data?.message || 'Failed to unblock user.') }
   }
