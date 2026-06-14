@@ -55,19 +55,6 @@ npm install
 
 ---
 
-## Environment Variables
-
-```env
-PORT=4000
-
-DB_URL=mongodb+srv://username:password@cluster.mongodb.net/udhaarbook
-
-SECRET_KEY=your_jwt_secret
-
-RAZORPAY_KEY_ID=rzp_live_xxxxxxxxx
-
-RAZORPAY_KEY_SECRET=xxxxxxxxxxxxxxxx
-```
 
 ---
 
@@ -248,16 +235,6 @@ node server.js
 
 ---
 
-## Production CORS
-
-```js
-app.use(
-  cors({
-    origin: "https://your-frontend.vercel.app",
-    credentials: true,
-  })
-);
-```
 
 ---
 
