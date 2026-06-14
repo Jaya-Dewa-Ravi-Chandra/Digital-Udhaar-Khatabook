@@ -6,9 +6,9 @@ import { verifyToken } from "../middlewares/VerifyToken.js";
 import { UserModel } from "../models/UserModel.js";
 import { TransactionModel } from "../models/TransactionModel.js";
 import { config } from "dotenv";
-
-config();
 import Razorpay from "razorpay";
+config();
+
 const razorpay = new Razorpay({
   key_id: process.env.RAZORPAY_KEY_ID,
   key_secret: process.env.RAZORPAY_KEY_SECRET,
