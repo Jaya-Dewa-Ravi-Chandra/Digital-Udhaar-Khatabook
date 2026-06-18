@@ -4,15 +4,6 @@ A full-stack web application for Indian small business owners to manage customer
 
 ---
 
-## Live Demo
-
-| Service  | URL                               |
-| -------- | --------------------------------- |
-| Frontend | https://your-app.vercel.app       |
-| Backend  | https://your-backend.onrender.com |
-
----
-
 ## Features
 
 ### For Merchants
